@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import confetti from 'canvas-confetti';
+import React, { useEffect, useState } from 'react';
 
 const Conclusion = () => {
 
   const [rejections, setRejections] = useState(0);
+
+  useEffect(() => {
+    confetti({
+        particleCount: 100,
+        spread: 100,
+        origin: { y: 0.6 }
+    })
+  }, [rejections])
 
   const increaseRejections = () => {
     setRejections(rejections + 1);
