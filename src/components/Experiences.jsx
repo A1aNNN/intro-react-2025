@@ -32,10 +32,10 @@ const Experiences = () => {
   return (
     <div className="experiences-section">
       <h2>Experience</h2>
-      
+
       <div className="experiences-list">
-        {experiences.map((exp, index) => (
-          <ExperienceCard key={index} company={exp.company} role={exp.role} tasks={exp.tasks} />
+        {experiences.map((exp) => (
+          <ExperienceCard company={exp.company} role={exp.role} tasks={exp.tasks} />
         ))}
       </div>
     </div>
