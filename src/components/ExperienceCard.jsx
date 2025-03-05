@@ -13,8 +13,8 @@ const ExperienceCard = ({ company, role, tasks }) => {
       <h3>{company}</h3>
       <h4>{role}</h4>
       {isOpen && <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
+        {tasks.map((task) => (
+          <li>{task}</li>
         ))}
       </ul>}
     </div>
